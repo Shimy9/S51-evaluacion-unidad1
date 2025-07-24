@@ -3,10 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProyectoController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', [ProyectoController::class, 'indexWeb']);
 
 // Rutas WEB para proyectos (para las vistas)
 Route::get('/proyectos', [ProyectoController::class, 'indexWeb'])->name('proyectos.index');
